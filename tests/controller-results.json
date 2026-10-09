@@ -1,0 +1,121 @@
+{
+  "sourcePath": "/workspace/scratch/c8091b3056e3/jd-helper-custom/content.js",
+  "sourceSha256": "a149a1e57a4254226af31d5d75d8d08ab0c8ac8ea24618593d63eefbd259f2d9",
+  "execution": "Node VM actual money functions, actual rowOf and actual controller; table discovery/layout stubbed",
+  "fixtureOnly": true,
+  "liveJingmai": false,
+  "results": [
+    {
+      "name": "target 0.01 scan/apply/verify/restore",
+      "passed": true
+    },
+    {
+      "name": "target 0.02 scan/apply/verify/restore",
+      "passed": true
+    },
+    {
+      "name": "target 0.03 scan/apply/verify/restore",
+      "passed": true
+    },
+    {
+      "name": "target 1.25 scan/apply/verify/restore",
+      "passed": true
+    },
+    {
+      "name": "default remains 0.01",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"0\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"0.00\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"-1\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"0.001\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"1.234\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"1e2\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"NaN\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"Infinity\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"90071992547409.92\" blocks scan/apply/verify",
+      "passed": true
+    },
+    {
+      "name": "100 -> 0.03 fills 99.97 exactly",
+      "passed": true
+    },
+    {
+      "name": "target exceeds one row blocks whole batch before writes",
+      "passed": true
+    },
+    {
+      "name": "equal original clears previous reduction to 0.00",
+      "passed": true
+    },
+    {
+      "name": "changing target invalidates preview and requires scan",
+      "passed": true
+    },
+    {
+      "name": "running operation forbids target change",
+      "passed": true
+    },
+    {
+      "name": "invalid or too-high later target preserves restoration",
+      "passed": true
+    },
+    {
+      "name": "re-apply different target still restores first original values",
+      "passed": true
+    },
+    {
+      "name": "quantity greater than 1 remains blocked",
+      "passed": true
+    },
+    {
+      "name": "new target after second apply preserves original restore record",
+      "passed": true
+    },
+    {
+      "name": "verify wrong resulting amount reports failure without writing",
+      "passed": true
+    },
+    {
+      "name": "restore preserves later manual input change",
+      "passed": true
+    },
+    {
+      "name": "strict target parser rejects money decorations and exponent syntax",
+      "passed": true
+    },
+    {
+      "name": "complete content script contains no click/submit/requestSubmit calls",
+      "passed": true
+    }
+  ]
+}

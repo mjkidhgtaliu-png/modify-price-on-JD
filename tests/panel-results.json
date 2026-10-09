@@ -1,0 +1,28 @@
+{
+  "sourcePath": "/workspace/scratch/c8091b3056e3/jd-helper-custom/content.js",
+  "fixtureOnly": true,
+  "liveJingmai": false,
+  "execution": "actual mountPanel/render/handlers in Node VM; minimal document/element/event stub, no layout/rendering engine",
+  "results": [
+    {
+      "name": "panel default and cent increment/decrement",
+      "passed": true
+    },
+    {
+      "name": "target input event commits 0.03 and preview shows expected 0.03",
+      "passed": true
+    },
+    {
+      "name": "invalid input disables scan/apply/verify but allows restore",
+      "passed": true
+    },
+    {
+      "name": "busy phase disables target input and both cent buttons",
+      "passed": true
+    },
+    {
+      "name": "action re-reads programmatically changed target and invalidates old preview",
+      "passed": true
+    }
+  ]
+}

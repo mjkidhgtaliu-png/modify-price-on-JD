@@ -1,0 +1,7 @@
+{
+  "fixtureOnly": true,
+  "liveJingmai": false,
+  "execution": "NOT EXECUTED: Playwright browser binary unavailable",
+  "reason": "browserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell",
+  "results": []
+}

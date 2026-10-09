@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><style>
+    body{font:14px sans-serif;margin:0;padding:20px}#dialog{margin-left:880px;width:800px;padding:20px;border:1px solid #aaa}
+    table{border-collapse:collapse;width:100%}th,td,[role="cell"],[role="columnheader"]{padding:10px;border:1px solid #ddd}
+    input{width:65px}small{display:block}button{padding:8px}
+    [role="table"]{display:grid;grid-template-columns:repeat(5,1fr)}[role="row"]{display:contents}
+    [role="columnheader"]{font-weight:bold;background:#eee}.original,.actual{white-space:nowrap}
+    </style></head><body>
+    <main>PRIVATE_ACCOUNT</main><section id="dialog" data-order-id="PRIVATE_ORDER_123"><h2>改价</h2>
+    <label><input type="radio" name="mode" checked>商品改价</label>
+    <label><input type="radio" name="mode">订单改价</label>
+    <div class="ant-table"><div class="ant-table-header"><table><thead><tr><th>商品信息</th><th>单价/数量</th><th>原商品应付</th><th>降价</th><th>改后商品应付</th></tr></thead></table></div><div class="ant-table-body"><table><thead style="display:none"><tr><th>商品信息</th><th>单价/数量</th><th>原商品应付</th><th>降价</th><th>改后商品应付</th></tr></thead><tbody><tr data-row-key="sku-0" data-cents="10000"><td><span>PRIVATE_PRODUCT_A</span><small>SKU-0</small></td><td><span>¥100.00</span><div>x1</div></td><td class="original">¥100.00</td><td class="reduce-cell"><input class="discount" type="text" value="10.00">折 = 减<input class="reduction" type="text" value="0.00">元</td><td class="actual">¥100.00</td></tr><tr data-row-key="sku-1" data-cents="7600"><td><span>PRIVATE_PRODUCT_B</span><small>SKU-1</small></td><td><span>¥76.00</span><div>x1</div></td><td class="original">¥76.00</td><td class="reduce-cell"><input class="discount" type="text" value="10.00">折 = 减<input class="reduction" type="text" value="1.00">元</td><td class="actual">¥76.00</td></tr></tbody></table></div></div><button id="submit">确定改价</button></section>
+    <script>
+      window.fixtureEvents={submit:0,changes:[]};
+      document.getElementById('submit').addEventListener('click',()=>fixtureEvents.submit++);
+      document.querySelectorAll('.reduction').forEach(input=>{
+        input.addEventListener('input',()=>fixtureEvents.changes.push(input.value));
+        input.addEventListener('change',()=>{
+          const row=input.closest('[data-row-key]');
+          const actual=row.querySelector('.actual');
+          if(actual)actual.textContent='¥'+((Number(row.dataset.cents)-Math.round(Number(input.value)*100))/100).toFixed(2);
+        });
+      });
+    </script></body></html>
